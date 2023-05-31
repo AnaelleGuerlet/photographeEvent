@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*début : chargement des polices*/
+/*Space mono*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,400;1,700&display=swap");
+/*poppins*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+/*fin : chargement des polices*/
+/*début : paramètres générales*/
+h1, h2, h3, .descrsptionsPhotos {
+  font-family: "Space Mono", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+/*début : couleurs du site*/
+/*début : couleurs du site*/
+/*fin : paramètres générales*/
+/*début : header*/
+#menuPrincipal a {
+  font-family: "Space Mono", sans-serif;
+  color: #000000;
+}
+
+/*fin : header*//*# sourceMappingURL=theme.css.map */
