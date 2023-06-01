@@ -46,4 +46,28 @@ p {
   border: none;
 }
 
-/*fin : footer*//*# sourceMappingURL=theme.css.map */
+/*fin : footer*/
+/*Début : Formulaire*/
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formulaire p {
+  width: 50%;
+}
+.formulaire label {
+  font-family: "Poppins", sans-serif;
+  color: #313144;
+}
+.formulaire input, .formulaire textarea {
+  border-radius: 8px;
+}
+.formulaire .boutonEnvoyer {
+  background-color: #D8D8D8;
+  border-radius: 2px;
+  width: 100%;
+  color: #000000;
+}
+
+/*fin : Formulaire*//*# sourceMappingURL=theme.css.map */
