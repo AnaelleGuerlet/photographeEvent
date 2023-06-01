@@ -1,11 +1,58 @@
 @charset "UTF-8";
 /*début : chargement des polices*/
-/*Space mono*/
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,400;1,700&display=swap");
-/*poppins*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 /*fin : chargement des polices*/
+/*début : intégration des fichiers scss*/
+/*début : couleurs du site*/
+/*début : couleurs du site*/
+#monModale {
+  visibility: hidden;
+  width: 90%;
+  z-index: 1000;
+  position: absolute;
+  height: 100%;
+  top: 55%;
+}
+#monModale div {
+  height: 100%;
+  background-color: #FFF;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 5px solid #000000;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 40%;
+}
+#monModale div h2 {
+  background-image: url("../assets/Contact.png");
+  height: 10%;
+}
+#monModale div p {
+  padding: 2%;
+}
+#monModale div p label {
+  color: #313144;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+}
+#monModale div p input, #monModale div p textarea {
+  padding: 10px;
+  border: 1px solid #B8BBC2;
+  border-radius: 8px;
+}
+
+/*fin : importation des fichiers scss*/
 /*début : paramètres générales*/
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 h1, h2, h3, .descrsptionsPhotos {
   font-family: "Space Mono", sans-serif;
 }
@@ -14,10 +61,11 @@ p {
   font-family: "Poppins", sans-serif;
 }
 
-/*début : couleurs du site*/
-/*début : couleurs du site*/
 /*fin : paramètres générales*/
 /*début : header*/
+#menuPrincipal {
+  align-items: center;
+}
 #menuPrincipal a {
   font-family: "Space Mono", sans-serif;
   color: #000000;
@@ -46,28 +94,4 @@ p {
   border: none;
 }
 
-/*fin : footer*/
-/*Début : Formulaire*/
-.formulaire {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.formulaire p {
-  width: 50%;
-}
-.formulaire label {
-  font-family: "Poppins", sans-serif;
-  color: #313144;
-}
-.formulaire input, .formulaire textarea {
-  border-radius: 8px;
-}
-.formulaire .boutonEnvoyer {
-  background-color: #D8D8D8;
-  border-radius: 2px;
-  width: 100%;
-  color: #000000;
-}
-
-/*fin : Formulaire*//*# sourceMappingURL=theme.css.map */
+/*fin : footer*//*# sourceMappingURL=theme.css.map */

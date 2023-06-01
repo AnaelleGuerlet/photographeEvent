@@ -13,7 +13,7 @@
 
 ?>
 			<footer id="site-footer" class="header-footer-group">
-
+				
 				<div class="section-inner">
 
 					<div class="footer-credits">
@@ -58,7 +58,6 @@
 					</a><!-- .to-the-top -->
 
 				</div><!-- .section-inner -->
-
 			</footer><!-- #site-footer -->
 
 		<?php wp_footer(); ?>

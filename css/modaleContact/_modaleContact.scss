@@ -1,0 +1,44 @@
+#monModale
+{
+    visibility: hidden;
+    width: 90%;
+    z-index: 1000;
+    position: absolute;
+    height: 100%;
+    top: 55%;
+    div 
+    {
+        height: 100%;
+        background-color: #FFF;
+        padding-left: 5%;
+        padding-right: 5%;
+        border: 5px solid $couleurPrincipalePolice;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        width: 40%;
+        h2 
+        {
+            background-image: url('../assets/Contact.png');
+            height: 10%;
+        }
+        p 
+        {
+            padding: 2%;
+            label
+            {
+                color:$couleurPrincipalePoliceBouton;
+                font-size: 12px;
+                font-family: 'Poppins', sans-serif;
+            }
+            input, textarea
+            {
+                padding: 10px;
+                border: 1px solid #B8BBC2;
+                border-radius: 8px;
+            }
+        }
+    }
+}

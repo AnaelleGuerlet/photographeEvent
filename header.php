@@ -88,7 +88,7 @@
 							<nav class="primary-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Horizontal', 'menu', 'twentytwenty' ); ?>">
 
 								<ul id="menuPrincipal" class="primary-menu reset-list-style">
-
+								
 								<?php
 								if ( has_nav_menu( 'primary' ) ) {
 
@@ -99,7 +99,7 @@
 											'theme_location' => 'primary',
 										)
 									);
-
+											
 								} elseif ( ! has_nav_menu( 'expanded' ) ) {
 
 									wp_list_pages(
@@ -113,7 +113,10 @@
 
 								}
 								?>
-
+									<li>
+										<a href="#" onclick="monModale()">Contact</a>
+									</li>
+									
 								</ul>
 
 							</nav><!-- .primary-menu-wrapper -->

@@ -1,44 +1,48 @@
 /*début : chargement des polices*/
-/*Space mono*/
+//Space mono*
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,400;1,700&display=swap');
-/*poppins*/
+//poppins
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 /*fin : chargement des polices*/
 
+/*début : intégration des fichiers scss*/
+//intégrations de couleurs.scss pour lees couleurs du site
+@import '_couleurs.scss';
+//intégrations de modaleContact.scss pour le formulaire de contact
+@import 'modaleContact/_modaleContact.scss'; 
+/*fin : importation des fichiers scss*/
+
 /*début : paramètres générales*/
+body
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 h1, h2, h3, .descrsptionsPhotos
 {
     font-family: 'Space Mono', sans-serif;
 }
-
 p
 {
     font-family: 'Poppins', sans-serif;
 }
-
-/*début : couleurs du site*/
-$couleurPrincipaleFormulaire:#E00000;
-$couleurSecondaireFormulaire:#FE5858;
-$couleurTerciaireFormulaire:#FFD6D6;
-$couleurPrincipalePolice:#000000;
-$couleurPrincipalePoliceBouton:#313144;
-$grisFoncé: #C4C4C4;
-$couleurBouton: #D8D8D8;
-$grisClair: #E5E5E5; 
-/*début : couleurs du site*/
 /*fin : paramètres générales*/
 
 /*début : header*/
-#menuPrincipal a
+#menuPrincipal 
 {
-    font-family: 'Space Mono', sans-serif;
-    color: $couleurPrincipalePolice;
-    font-weight: 400;
-    font-size: 16px;
-    text-decoration: none;
+    align-items: center;
+    a
+    {
+        font-family: 'Space Mono', sans-serif;
+        color: $couleurPrincipalePolice;
+        font-weight: 400;
+        font-size: 16px;
+        text-decoration: none;
+    }
 }
 /*fin : header*/
-
 
 /*début : footer*/
 #site-footer
@@ -60,32 +64,3 @@ $grisClair: #E5E5E5;
     border: none;
 }
 /*fin : footer*/
-
-/*Début : Formulaire*/
-.formulaire 
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    p
-    {
-        width: 50%;
-    }
-    label
-    {
-        font-family: 'Poppins', sans-serif;
-        color: $couleurPrincipalePoliceBouton;
-    }
-    input, textarea
-    {
-        border-radius: 8px;
-    }
-    .boutonEnvoyer
-    {
-        background-color: $couleurBouton;
-        border-radius: 2px;
-        width: 100%;
-        color: $couleurPrincipalePolice;
-    }
-}
-/*fin : Formulaire*/
