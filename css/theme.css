@@ -21,6 +21,29 @@ p {
 #menuPrincipal a {
   font-family: "Space Mono", sans-serif;
   color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
 }
 
-/*fin : header*//*# sourceMappingURL=theme.css.map */
+/*fin : header*/
+/*début : footer*/
+#site-footer {
+  display: none;
+}
+
+.footer-menu > li > a {
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footer-top {
+  justify-content: center;
+}
+
+.footer-nav-widgets-wrapper {
+  border: none;
+}
+
+/*fin : footer*//*# sourceMappingURL=theme.css.map */

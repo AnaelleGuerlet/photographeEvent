@@ -17,15 +17,14 @@ p
 }
 
 /*début : couleurs du site*/
-$rouge:#E00000;
-$rougeSecondaire:#FE5858;
-$rougeTerciaire:#FFD6D6;
-$noir:#000000;
-$bleuFoncé:#313144;
+$couleurPrincipaleFormulaire:#E00000;
+$couleurSecondaireFormulaire:#FE5858;
+$couleurTerciaireFormulaire:#FFD6D6;
+$couleurPrincipalePolice:#000000;
+$couleurPrincipalePoliceBouton:#313144;
 $grisFoncé: #C4C4C4;
-$grisMoyen: #D8D8D8;
-$grisClair: #E5E5E5;
-
+$couleurBouton: #D8D8D8;
+$grisClair: #E5E5E5; 
 /*début : couleurs du site*/
 /*fin : paramètres générales*/
 
@@ -33,7 +32,32 @@ $grisClair: #E5E5E5;
 #menuPrincipal a
 {
     font-family: 'Space Mono', sans-serif;
-    color: $noir;
-    
+    color: $couleurPrincipalePolice;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
 }
 /*fin : header*/
+
+
+/*début : footer*/
+#site-footer
+{
+    display: none;
+}
+
+.footer-menu > li > a
+{
+    color: $couleurPrincipalePolice;
+    font-weight: 400;
+    font-size: 16px;
+}
+.footer-top
+{
+    justify-content: center;
+}
+.footer-nav-widgets-wrapper
+{
+    border: none;
+}
+/*fin : footer*/
