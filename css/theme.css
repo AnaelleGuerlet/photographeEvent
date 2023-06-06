@@ -72,6 +72,10 @@ p {
 
 /*fin : paramètres générales*/
 /*début : header*/
+#masthead {
+  padding: 0;
+}
+
 #menuPrincipal {
   justify-content: space-around;
   width: 50vw;

@@ -10,6 +10,8 @@
 @import '_couleurs.scss';
 //intégrations de modaleContact.scss pour le formulaire de contact
 @import 'modaleContact/_modaleContact.scss'; 
+//intégrations de archive-photos.scss pour la page d'archive
+@import '_archive-photos.scss'; 
 /*fin : importation des fichiers scss*/
 
 /*début : paramètres générales*/
@@ -30,6 +32,10 @@ p
 /*fin : paramètres générales*/
 
 /*début : header*/
+#masthead
+{
+    padding: 0;
+}
 #menuPrincipal 
 {
     justify-content: space-around;
