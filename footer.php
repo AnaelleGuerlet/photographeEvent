@@ -38,6 +38,7 @@
 					?>
 				</ul><!-- .footer-navigation-wrapper -->
 			</nav><!-- .footer-navigation -->
+			<?php echo do_shortcode('[hf_form slug="contact"]'); ?>
 		<?php endif; ?>
 	</footer><!-- #colophon -->
 

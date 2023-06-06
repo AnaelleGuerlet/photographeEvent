@@ -54,15 +54,85 @@
   text-transform: none;
 }
 
+#archive_header {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#archive_header .archive__header--hero {
+  width: 100vw;
+  max-height: 966px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#archive_header h1 {
+  position: absolute;
+  font-family: "Space Mono", sans-serif;
+  font-size: 96px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 142px;
+  color: transparent;
+  -webkit-text-stroke: 3px white;
+}
+
+.archive__body {
+  margin-left: 7%;
+  margin-right: 7%;
+}
+.archive__body__filtres {
+  display: flex;
+  gap: 5%;
+  height: 42px;
+}
+.archive__body__filtres__selection {
+  flex: 1;
+  border: 1.3px solid #b8bbc2;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+.archive__body__photos {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 70px 20px;
+}
+.archive__body__photos article {
+  width: 50%;
+  width: 564px;
+  height: 495px;
+}
+.archive__body__photos article header {
+  margin: 0;
+  padding-bottom: 0;
+}
+.archive__body__photos article header h2 {
+  display: none;
+}
+.archive__body__photos article header figure {
+  margin: 0;
+}
+.archive__body__photos article header figure img {
+  width: 564px !important;
+  height: 495px !important;
+  margin: 0 !important;
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
 /*fin : importation des fichiers scss*/
 /*début : paramètres générales*/
-body {
-  width: 100%;
+*, #main {
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, .descrsptionsPhotos {
+h1, h2, h3, .descrsptionsPhotos, a {
   font-family: "Space Mono", sans-serif;
 }
 
@@ -102,10 +172,24 @@ p {
   display: none;
 }
 
-.footer-menu > li > a {
+#colophon {
+  border-top: 1px solid #000000;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+#colophon nav {
+  margin: 0;
+}
+#colophon li > a {
   color: #000000;
   font-weight: 400;
   font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#colophon form {
+  margin: 0;
 }
 
 .footer-top {

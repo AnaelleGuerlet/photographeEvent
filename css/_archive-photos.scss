@@ -1,0 +1,83 @@
+#archive_header
+{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .archive
+    {
+        &__header--hero
+        {
+            width: 100vw;
+            max-height: 966px;
+            object-fit: cover;
+        }
+    }
+    h1
+    {
+        position: absolute;
+        font-family: 'Space Mono', sans-serif;
+        font-size: 96px;
+        font-weight: 700;
+        font-style: italic;
+        line-height: 142px;
+        color: transparent;
+        -webkit-text-stroke: 3px white;
+    }
+}
+
+.archive__body
+{
+    margin-left: 7%;
+    margin-right: 7%;
+    &__filtres
+    {
+        display: flex;
+        gap: 5%;
+        height: 42px;
+        &__selection
+        {
+            flex: 1;
+            border: 1.3px solid $couleurFiltres;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    &__photos
+    {
+        margin-top: 4%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 70px 20px;
+        article
+    {
+        width: 50%;
+        width: 564px;
+        height: 495px;
+        header
+        {
+            margin: 0;
+            padding-bottom: 0;
+            h2
+            {
+                display: none;
+            }
+            figure 
+            {
+                margin: 0;
+                img 
+                {
+                    width: 564px !important;
+                    height: 495px !important;
+                    margin: 0 !important;
+                    object-fit: cover !important;
+                }
+            }
+        }
+    }
+    }
+}
