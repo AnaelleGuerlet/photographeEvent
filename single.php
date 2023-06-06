@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+The Template name: Page pour une photo
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -11,7 +11,7 @@
 
 get_header();
 
-/* Start the Loop */
+/* The loop */ 
 while ( have_posts() ) :
 	the_post();
 
@@ -46,5 +46,4 @@ while ( have_posts() ) :
 		)
 	);
 endwhile; // End of the loop.
-
-get_footer();
+get_footer();?>

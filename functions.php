@@ -13,6 +13,7 @@ function theme_enqueue_styles()
 /*fin : action qui permet de charger des scripts dans notre theme */
 
 
-//chargement du code du modale Contact
 
+
+   
 ?>
