@@ -1,0 +1,29 @@
+/*début : header*/
+#masthead
+{
+    padding: 0;
+}
+#menuPrincipal 
+{
+    justify-content: space-around;
+    width: 50vw;
+    padding: 0;
+    display: flex;
+    li 
+    {
+        list-style: none;
+    }
+    a
+    {
+        font-family: 'Space Mono', sans-serif;
+        color: $couleurPrincipalePolice;
+        font-weight: 400;
+        font-size: 16px;
+        text-decoration: none;
+        &:focus
+        {
+            background-color: transparent;
+        }
+    }
+}
+/*fin : header*/

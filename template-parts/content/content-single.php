@@ -4,42 +4,50 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article class="article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="article__partie1">
+		<div class="article__partie1__descriptionPhoto">
+			<div class="article__partie1__descriptionPhoto__description">
+				<?php the_title( '<h2 class="article__partie1__descriptionPhoto__description--titre">', '</h2>' ); ?>
+				<p>Référence : <?php the_field( 'reference' ); ?><br>
+				<?php the_terms( $post->ID, 'categorie', 'Catégoie : ' ); ?><br>
+				<?php the_terms( $post->ID, 'format', 'Format : ' ); ?><br>
+				Type : <?php the_field( 'type' ); ?><br>
+				Année : <?php the_field( 'annee' ); ?></p>
+			</div>
 
-	<div class="pagePhoto__description">
-		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-		<?php the_terms( $post->ID, 'categorie', 'Catégoie : ' ); ?><br>
-		<?php the_terms( $post->ID, 'format', 'Format : ' ); ?><br>
-		Référence : <?php the_field( 'reference' ); ?><br>
-		Type : <?php the_field( 'type' ); ?>
+			<div class="article__partie1__descriptionPhoto__photo">
+				<?php twenty_twenty_one_post_thumbnail(); ?>
+			</div>
+		</div>
+
+		<div class="article__partie1__interaction">
+			<div class="article__partie1__interaction__contact">
+				<p>Cette photo vous interresse ?</p> 
+				<button>
+					<a href="#" onclick="monModale()">Contact</a>
+				</button>
+			</div>
+			
+			<div class="article__partie1__interaction__pagination">
+				<?php 
+
+				$articlePrecedent = get_previous_post();
+				if($articlePrecedent!=null)
+				{
+					$miniaturePrecendent = get_the_post_thumbnail( $articlePrecedent->ID );
+					previous_post_link( '%link', $miniaturePrecendent, '' );
+				}
+
+				$articleSuivant = get_next_post();
+				if($articleSuivant!=null)
+				{
+				$miniatureSuivant = get_the_post_thumbnail( $articleSuivant->ID );
+				next_post_link( '%link', $miniatureSuivant, 'arrow' );
+				}
+			?>
+			</div>
+			
+		</div>
 	</div>
-
-	<div class="pagePhoto__photo">
-		<?php twenty_twenty_one_post_thumbnail(); ?>
-	</div>
-	
-
-	<div class="entry-content">
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'twentytwentyone' ) . '">',
-				'after'    => '</nav>',
-				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'twentytwentyone' ),
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer default-max-width">
-		<?php twenty_twenty_one_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
-
-	<?php if ( ! is_singular( 'attachment' ) ) : ?>
-		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
-	<?php endif; ?>
-
-	</article><!-- #post-<?php the_ID(); ?> -->
+</article>

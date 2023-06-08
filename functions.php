@@ -12,6 +12,13 @@ function theme_enqueue_styles()
 }
 /*fin : action qui permet de charger des scripts dans notre theme */
 
+//permet a ce que les photos de la page archive soit des liens
+add_filter('post_thumbnail_html', 'gkp_post_thumbnail_html', 10, 2 );
+function gkp_post_thumbnail_html( $html, $post_id ) {
+    $html = '<a href="' . get_permalink( $post_id ) . '">' . $html . '</a>';
+    return $html;
+}
+
 
 
 

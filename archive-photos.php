@@ -5,10 +5,12 @@ Template Name: Photos
 
 
 get_header(); ?>
+<!--début : création du hero-->
 <header id="archive_header" class="archive__header">
 <img class="archive__header--hero" src="wp-content/themes/photographeEvent/assets/header_images/nathalie-<?php echo(rand(0,15));?>.jpeg"/>
     <h1>PHOTOGRAPHE EVENT</h1>
 </header>
+<!--fin : création du hero-->
 
 <main class="archive__body">
 <!--début : création des filtres pour la page archive-->
@@ -62,9 +64,14 @@ get_header(); ?>
         <!--parcourir les informations ($reponse) et les affiche-->
         <?php while ( $reponse->have_posts() ) : $reponse->the_post(); ?>
         <!--début : l'ensemble des photos de la page-->
-        <?php get_template_part('template-parts/content/content', get_theme_mod('display_excerpt_or_full_post', 'excerpt' ));?>
+		<?php
+        echo '<a href="'.esc_url( get_permalink() ) .'">';
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large'); 
+        echo '<img class="miniature" src="'.$image[0].'"/>';
+        echo '</a>';
+        ?> 
         <!--fin : l'ensemble des photos de la page-->
-        <!--nextpage-->
+        
         <?php endwhile; ?>
     </div>
 </main>

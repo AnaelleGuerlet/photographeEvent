@@ -1,0 +1,24 @@
+/*début : footer*/
+#colophon
+{
+    border-top:1px solid black ;
+    margin-top: 0;
+    padding-bottom: 0;
+    nav 
+    {
+        margin: 0;
+    }
+    li > a
+    {
+        color: $couleurPrincipalePolice;
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    form 
+    {
+        margin: 0;
+    }
+}
+/*fin : footer*/

@@ -6,6 +6,68 @@
 /*début : intégration des fichiers scss*/
 /*début : couleurs du site*/
 /*début : couleurs du site*/
+/*début : paramètres générales*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, a {
+  font-family: "Space Mono", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+/*fin : paramètres générales*/
+/*début : header*/
+#masthead {
+  padding: 0;
+}
+
+#menuPrincipal {
+  justify-content: space-around;
+  width: 50vw;
+  padding: 0;
+  display: flex;
+}
+#menuPrincipal li {
+  list-style: none;
+}
+#menuPrincipal a {
+  font-family: "Space Mono", sans-serif;
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+}
+#menuPrincipal a:focus {
+  background-color: transparent;
+}
+
+/*fin : header*/
+/*début : footer*/
+#colophon {
+  border-top: 1px solid black;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+#colophon nav {
+  margin: 0;
+}
+#colophon li > a {
+  color: #000000;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#colophon form {
+  margin: 0;
+}
+
+/*fin : footer*/
 .formulaire {
   visibility: hidden;
   width: 100%;
@@ -42,9 +104,9 @@
   font-family: "Poppins", sans-serif;
 }
 .formulaire__content--body input, .formulaire__content--body textarea {
-  padding: 10px !important;
-  border: 1px solid #B8BBC2 !important;
-  border-radius: 8px !important;
+  padding: 10px;
+  border: 1px solid #B8BBC2;
+  border-radius: 8px;
 }
 .formulaire__content--body #boutonEnvoyer {
   width: 100%;
@@ -102,102 +164,65 @@
   flex-wrap: wrap;
   gap: 70px 20px;
 }
-.archive__body__photos article {
-  width: 50%;
+.archive__body__photos .miniature {
   width: 564px;
   height: 495px;
-}
-.archive__body__photos article header {
   margin: 0;
-  padding-bottom: 0;
-}
-.archive__body__photos article header h2 {
-  display: none;
-}
-.archive__body__photos article header figure {
-  margin: 0;
-}
-.archive__body__photos article header figure img {
-  width: 564px !important;
-  height: 495px !important;
-  margin: 0 !important;
-  -o-object-fit: cover !important;
-     object-fit: cover !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-/*fin : importation des fichiers scss*/
-/*début : paramètres générales*/
-*, #main {
-  margin: 0;
-  padding: 0;
+.article {
+  overflow: hidden;
+  margin-left: 7%;
+  margin-right: 7%;
 }
-
-h1, h2, h3, .descrsptionsPhotos, a {
-  font-family: "Space Mono", sans-serif;
-}
-
-p {
-  font-family: "Poppins", sans-serif;
-}
-
-/*fin : paramètres générales*/
-/*début : header*/
-#masthead {
-  padding: 0;
-}
-
-#menuPrincipal {
-  justify-content: space-around;
-  width: 50vw;
-  padding: 0;
+.article__partie1 {
   display: flex;
+  flex-direction: column;
 }
-#menuPrincipal li {
-  list-style: none;
+.article__partie1__descriptionPhoto {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
 }
-#menuPrincipal a {
+.article__partie1__descriptionPhoto__description, .article__partie1__descriptionPhoto__photo {
+  width: 50%;
+}
+.article__partie1__descriptionPhoto__description p {
   font-family: "Space Mono", sans-serif;
-  color: #000000;
   font-weight: 400;
-  font-size: 16px;
-  text-decoration: none;
+  font-size: 14px;
 }
-#menuPrincipal a:focus {
-  background-color: transparent;
-}
-
-/*fin : header*/
-/*début : footer*/
-#site-footer {
-  display: none;
-}
-
-#colophon {
-  border-top: 1px solid #000000;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-}
-#colophon nav {
-  margin: 0;
-}
-#colophon li > a {
-  color: #000000;
-  font-weight: 400;
-  font-size: 16px;
+.article__partie1__descriptionPhoto__description--titre {
+  font-family: "Space Mono", sans-serif;
   text-transform: uppercase;
+  font-style: italic;
+  width: 50%;
+}
+.article__partie1__descriptionPhoto__description a {
   text-decoration: none;
 }
-#colophon form {
+.article__partie1__descriptionPhoto__photo figure {
   margin: 0;
 }
-
-.footer-top {
-  justify-content: center;
+.article__partie1__descriptionPhoto__photo img {
+  height: 100vh !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+.article__partie1__interaction {
+  height: 118px;
+  display: flex;
+  flex-direction: row;
+}
+.article__partie1__interaction__contact, .article__partie1__interaction__pagination {
+  width: 50%;
+  height: auto;
+}
+.article__partie1__interaction__pagination {
+  display: flex;
+  flex-direction: row;
 }
 
-.footer-nav-widgets-wrapper {
-  border: none;
-}
-
-/*fin : footer*//*# sourceMappingURL=theme.css.map */
+/*fin : importation des fichiers scss*//*# sourceMappingURL=theme.css.map */

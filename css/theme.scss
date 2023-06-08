@@ -8,93 +8,16 @@
 /*début : intégration des fichiers scss*/
 //intégrations de couleurs.scss pour lees couleurs du site
 @import '_couleurs.scss';
+//intégrations de _général.scss pour la mise en page générale du site
+@import '_general.scss'; 
+//intégrations de _headerNav.scss pour la mise en page du menu de navigation
+@import '_headerNav.scss'; 
+//intégrations de _général.scss pour la mise en page du footer
+@import '_footer.scss'; 
 //intégrations de modaleContact.scss pour le formulaire de contact
 @import 'modaleContact/_modaleContact.scss'; 
 //intégrations de archive-photos.scss pour la page d'archive
 @import '_archive-photos.scss'; 
+//intégrations de content-single.scss pour la page d'article'
+@import '_content-single.scss'; 
 /*fin : importation des fichiers scss*/
-
-/*début : paramètres générales*/
-*, #main
-{
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3, .descrsptionsPhotos, a
-{
-    font-family: 'Space Mono', sans-serif;
-}
-p
-{
-    font-family: 'Poppins', sans-serif;
-}
-/*fin : paramètres générales*/
-
-/*début : header*/
-#masthead
-{
-    padding: 0;
-}
-#menuPrincipal 
-{
-    justify-content: space-around;
-    width: 50vw;
-    padding: 0;
-    display: flex;
-    li 
-    {
-        list-style: none;
-    }
-    a
-    {
-        font-family: 'Space Mono', sans-serif;
-        color: $couleurPrincipalePolice;
-        font-weight: 400;
-        font-size: 16px;
-        text-decoration: none;
-        &:focus
-        {
-            background-color: transparent;
-        }
-    }
-}
-/*fin : header*/
-
-/*début : footer*/
-#site-footer
-{
-    display: none;
-}
-#colophon
-{
-    border-top: 1px solid $couleurPrincipalePolice;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    nav 
-    {
-        margin: 0;
-    }
-    li > a
-    {
-        color: $couleurPrincipalePolice;
-        font-weight: 400;
-        font-size: 16px;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
-    form 
-    {
-        margin: 0;
-    }
-}
-.footer-top
-{
-    justify-content: center;
-}
-.footer-nav-widgets-wrapper
-{
-    border: none;
-}
-/*fin : footer*/

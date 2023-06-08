@@ -53,31 +53,12 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 70px 20px;
-        article
-    {
-        width: 50%;
-        width: 564px;
-        height: 495px;
-        header
+        .miniature
         {
+            width: 564px;
+            height: 495px;
             margin: 0;
-            padding-bottom: 0;
-            h2
-            {
-                display: none;
-            }
-            figure 
-            {
-                margin: 0;
-                img 
-                {
-                    width: 564px !important;
-                    height: 495px !important;
-                    margin: 0 !important;
-                    object-fit: cover !important;
-                }
-            }
+            object-fit: cover;
         }
-    }
     }
 }
