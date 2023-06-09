@@ -14,23 +14,24 @@ get_header(); ?>
 
 <main class="archive__body">
 <!--début : création des filtres pour la page archive-->
-        <form class="archive__body__filtres" action="#" method="GET">
+        <form class="archive__body__filtres" method="POST">
             <select class="archive__body__filtres__selection archive__filtres__selection--date" name="categorie" id="selection_categorie">
-                <option selected>CATEGORIE</option>
+                <option selected value="0">CATEGORIE</option>
                 <option value="reception">Réception</option>
                 <option value="television">Télévision</option>
                 <option value="concert">Concert</option>
                 <option value="mariage">Mariage</option>
+                
             </select>
         
             <select class="archive__body__filtres__selection archive__filtres__selection--date" name="format" id="selection_format">
-                <option value="">FORMATS</option>
+                <option selected value="0">FORMATS</option>
                 <option value="paysage">Paysage</option>
                 <option value="portrait">Portrait</option>
             </select>
 
             <select class="archive__body__filtres__selection archive__filtres__selection--date" name="date" id="seclection_date">
-                <option value="">TRIER PAR</option>
+                <option selected value="0">TRIER PAR</option>
                 <option value="recentes">Des plus récentes aux plus anciennes</option>
                 <option value="anciennes">Des plus anciennes aux plus récentes</option>
             </select>
@@ -42,23 +43,25 @@ get_header(); ?>
 <!-- je définis ce que je veux -->
     <?php $filtres = array( 'post_type' => 'Photos', 'posts_per_page' => 12, 'paged' => $paged);
 /*début : vérification du filtre format*/
-    if (isset ($_GET ['format']))
+
+    if (isset ($_POST ['format']) && ($_GET ['format']) != "0")
     {
         $filtres ['format']=$_GET['format'];
     }
-    if (isset ($_GET ['categorie']))
+    if (isset ($_POST ['categorie']) && ($_GET ['categorie']) != "0")
     {
         $filtres ['categorie']=$_GET['categorie'];
     }
-    if (isset ($_GET ['date']))
+    if (isset ($_POST ['date']) && ($_GET ['date']) != "0")
     {
         $filtres ['date']=$_GET['date'];
     }
+
     ?>
     <!--fin : vérification du filtre format-->
 
     <!--je fais la demande des informations que je souhaite a wp que je stock dans une réponse(variable)-->
-    <?php $reponse = new WP_Query( $filtres ); ?>
+   <?php $reponse = new WP_Query( $filtres ); ?>
 
     <div class="archive__body__photos">
         <!--parcourir les informations ($reponse) et les affiche-->
@@ -73,6 +76,8 @@ get_header(); ?>
         <!--fin : l'ensemble des photos de la page-->
         
         <?php endwhile; ?>
+        <a href="#" class="load-posts">Load Posts</a>
+<div id="post-container"></div>
     </div>
 </main>
 

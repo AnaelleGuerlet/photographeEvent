@@ -38,13 +38,21 @@
         height: 42px;
         &__selection
         {
+            
             flex: 1;
             border: 1.3px solid $couleurFiltres;
             border-radius: 8px;
             font-family: 'Poppins', sans-serif;
             font-size: 12px;
             font-weight: 500;
+            
         }
+       
+        option:hover
+        {
+            background-color: $couleurTerciaireFormulaire;
+        }
+        
     }
     &__photos
     {

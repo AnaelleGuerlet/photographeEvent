@@ -1,20 +1,24 @@
-console.log('yo!');
+//début : ajax
+jQuery(document).ready(function($) {
+    // Code that uses jQuery's $ can follow here.
 
-function monModale(e) 
-{
-    el = document.getElementById("monModale");
-    el.style.visibility = "visible";
-}
-
-function monModaleClose(e) 
-{
-    e = window.event || e;
-    el = document.getElementById("monModale");
-    if (e.target == el)
-        el.style.visibility = "hidden";
-}
-
-function rien()
-{
-    return true;
-}
+$(".load-posts").click(function(){ 
+    const ajaxurl = $(this).attr('action');
+    $("#post-container").html("loading...");
+    $.ajax({
+        url: frontend_ajax_object.ajaxurl,
+        type: 'post',
+        data: {
+            action: 'post_cart_clb',
+        },
+        success: function(data) {
+            $("#post-container").html(data);
+        },
+        fail: {
+            // What I have to do...
+        }
+    });
+    return false;
+});
+});
+//fin : ajax

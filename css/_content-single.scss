@@ -60,10 +60,51 @@
                 width: 50% ;
                 height: auto;
             }
+            &__contact
+            {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                p 
+                {
+                    font-size: 14px;
+                    font-weight: 300;
+                    width: 50%;
+                }
+                #article__partie1__interaction__contact--bouton
+                {
+                    background-color: $couleurBouton;
+                    width: 50%;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $couleurPrincipalePolice;
+                    a 
+                    {
+                        text-decoration: none;
+                    }
+                    &:hover
+                    {
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
             &__pagination
             {
                 display: flex;
                 flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 5%;
+                &--suivant
+                {
+                    text-align: end;
+                }
+                &--precedent--miniaturePagination, &--suivant--miniaturePagination
+                {
+                    height: 71px;
+                    width: 81px;
+                }
             }
         }
     }

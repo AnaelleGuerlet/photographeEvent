@@ -45,6 +45,9 @@ p {
 #menuPrincipal a:focus {
   background-color: transparent;
 }
+#menuPrincipal a:hover {
+  font-weight: 700;
+}
 
 /*fin : header*/
 /*début : footer*/
@@ -157,6 +160,9 @@ p {
   font-size: 12px;
   font-weight: 500;
 }
+.archive__body__filtres option:hover {
+  background-color: #FFD6D6;
+}
 .archive__body__photos {
   margin-top: 4%;
   display: flex;
@@ -220,9 +226,43 @@ p {
   width: 50%;
   height: auto;
 }
+.article__partie1__interaction__contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.article__partie1__interaction__contact p {
+  font-size: 14px;
+  font-weight: 300;
+  width: 50%;
+}
+.article__partie1__interaction__contact #article__partie1__interaction__contact--bouton {
+  background-color: #D8D8D8;
+  width: 50%;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+}
+.article__partie1__interaction__contact #article__partie1__interaction__contact--bouton a {
+  text-decoration: none;
+}
+.article__partie1__interaction__contact #article__partie1__interaction__contact--bouton:hover {
+  background-color: black;
+  color: white;
+}
 .article__partie1__interaction__pagination {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5%;
+}
+.article__partie1__interaction__pagination--suivant {
+  text-align: end;
+}
+.article__partie1__interaction__pagination--precedent--miniaturePagination, .article__partie1__interaction__pagination--suivant--miniaturePagination {
+  height: 71px;
+  width: 81px;
 }
 
 /*fin : importation des fichiers scss*//*# sourceMappingURL=theme.css.map */
