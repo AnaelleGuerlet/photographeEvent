@@ -33,7 +33,7 @@
 		);
 		?>
 		<li>
-			<a href="#" onclick="monModale()">Contact</a>
+			<a href="#" onclick="modaleContact()">Contact</a>
 		</li>
 	</ul>
 	</nav><!-- #site-navigation -->

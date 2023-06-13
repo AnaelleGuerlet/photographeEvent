@@ -1,0 +1,110 @@
+::-webkit-scrollbar
+{
+    width: 7px;
+}
+
+::-webkit-scrollbar-track
+{
+    background: #fff;
+    padding: 1px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: $couleurPrincipaleFormulaire;
+    border-radius: 4px;
+}
+
+.lightbox
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 10;
+    overflow: auto;
+    animation: lightboxIn .5s;
+    transition: opacity .3s;
+    &__next, &__prev 
+    {
+        border: none;
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        top:0;
+        right:0;
+        margin-top: 15px;
+        z-index: 11;
+        font-size: 12px;
+        font-weight: 400;
+        font-family: 'Space Mono', sans-serif;
+        background-color: transparent;
+    }
+    &__next
+    {
+        background: url("../assets/arrowNext.svg") 80% center / 25px 16px no-repeat;
+    }
+    &__prev
+    {
+        right: auto;
+        left: 0;
+        image-orientation: from-image;
+        background: url(../assets/arrowPrev.svg) 20% center / 25px 16px no-repeat;
+    }
+    &__close
+    {
+        border: none;
+        width: 22px;
+        height: 22px;
+        background: url(../assets/croix.svg) center center / 100% 100% no-repeat transparent;
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        z-index: 12;
+    }
+    button 
+    {
+        opacity: .5;
+        transition: opacity .3s;
+        &:hover
+        {
+            opacity: 1;
+            color: white;
+        }
+    }
+    &__container
+    {
+        img 
+        {
+            max-width: 100%;
+            max-height: 100vh;
+            height: auto;
+        }
+        margin-left: 200px;
+        margin-right: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        animation: lightboxIn .5s;
+    }
+    &__loader
+    {
+        width: 38px;
+        height: 38px;
+        opacity: .5;
+        background: url(../assets/loader.svg) center center no-repeat;
+    }
+    &__fadeOut
+    {
+        opacity: 0;
+    }
+}
+
+@keyframes lightboxIn 
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

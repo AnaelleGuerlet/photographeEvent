@@ -13,6 +13,7 @@ get_header(); ?>
 <!--fin : création du hero-->
 
 <main class="archive__body">
+
 <!--début : création des filtres pour la page archive-->
         <form class="archive__body__filtres" method="POST">
             <select class="archive__body__filtres__selection archive__filtres__selection--date" name="categorie" id="selection_categorie">
@@ -56,30 +57,34 @@ get_header(); ?>
     {
         $filtres ['date']=$_GET['date'];
     }
-
     ?>
     <!--fin : vérification du filtre format-->
 
     <!--je fais la demande des informations que je souhaite a wp que je stock dans une réponse(variable)-->
-   <?php $reponse = new WP_Query( $filtres ); ?>
+    <?php $reponse = new WP_Query( $filtres ); ?>
 
     <div class="archive__body__photos">
         <!--parcourir les informations ($reponse) et les affiche-->
         <?php while ( $reponse->have_posts() ) : $reponse->the_post(); ?>
         <!--début : l'ensemble des photos de la page-->
 		<?php
-        echo '<a href="'.esc_url( get_permalink() ) .'">';
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large'); 
-        echo '<img class="miniature" src="'.$image[0].'"/>';
-        echo '</a>';
+        echo '<div class="overlay">';
+            echo '<a href="'.esc_url( get_permalink() ) .'">';
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large'); 
+                echo '<img class="miniature overlay__image" src="'.$image[0].'"/>';
+            include 'overlay.php';
+            echo '</a>';
+        echo '</div>';
         ?> 
         <!--fin : l'ensemble des photos de la page-->
+
+        <?php endwhile;?>
+        <button id="boutonChargerPlus" class=" load-posts">
+            Charger plus
+        </button> 
+        <div id="post-container"></div>
         
-        <?php endwhile; ?>
-        <a href="#" class="load-posts">Load Posts</a>
-<div id="post-container"></div>
     </div>
 </main>
-
 
 <?php get_footer(); ?>

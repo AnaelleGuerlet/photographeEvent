@@ -7,17 +7,21 @@
     {
         display: flex;
         flex-direction: column;
+        border-bottom: black 1px solid ;
         &__descriptionPhoto
         {
             display: flex;
             align-items: flex-end;
             flex-direction: row;
+            gap: 2%;
             &__description, &__photo
             {
                 width: 50%;
             }
             &__description
             {
+                border-bottom: black 1px solid ;
+                padding-bottom: 2%;
                 p 
                 {
                     font-family: 'Space Mono', sans-serif;
@@ -44,9 +48,9 @@
                 }
                 img
                 {
-                    height: 100vh !important;
-                    width: auto !important;
-                    margin: 0 !important;
+                    height: auto;
+                    width: 100%;
+                    margin: 0;
                 }
             }
         }
@@ -105,6 +109,32 @@
                     height: 71px;
                     width: 81px;
                 }
+            }
+        }
+    }
+    &__partie2 
+    {
+        align-items: center;
+        h3
+        {
+            font-size: 18px ;
+            font-family: 'Space Mono' ;
+            font-weight: 400;
+            text-transform: uppercase;
+            padding: 2% 0 4% 1%;
+        }
+        &__photosSimilaires
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 70px 20px;
+            justify-content: center;
+            &--miniatures
+            {
+                width: 564px;
+                height: 495px; 
+                object-fit: cover;
             }
         }
     }

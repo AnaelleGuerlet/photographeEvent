@@ -1,4 +1,7 @@
 /*début : chargement des polices*/
+
+//intégrations de couleurs.scss pour lees couleurs du site
+@import '_variables.scss';
 //Space mono*
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,400;1,700&display=swap');
 //poppins
@@ -6,18 +9,21 @@
 /*fin : chargement des polices*/
 
 /*début : intégration des fichiers scss*/
-//intégrations de couleurs.scss pour lees couleurs du site
-@import '_couleurs.scss';
+
 //intégrations de _général.scss pour la mise en page générale du site
-@import '_general.scss'; 
+@import '_general'; 
 //intégrations de _headerNav.scss pour la mise en page du menu de navigation
-@import '_headerNav.scss'; 
-//intégrations de _général.scss pour la mise en page du footer
-@import '_footer.scss'; 
-//intégrations de modaleContact.scss pour le formulaire de contact
-@import 'modaleContact/_modaleContact.scss'; 
+@import '_headerNav'; 
 //intégrations de archive-photos.scss pour la page d'archive
-@import '_archive-photos.scss'; 
+@import '_archive-photos'; 
 //intégrations de content-single.scss pour la page d'article'
-@import '_content-single.scss'; 
+@import '_content-single'; 
+//intégrations de overlay.scss pour toutes les photos du site
+@import '_overlay'; 
+//intégrations de modaleContact.scss pour le formulaire de contact
+@import 'modales/_modaleContact'; 
+//intégrations de modaleLightbox.scss pour la lightbox
+@import 'modales/_modaleLightbox'; 
+//intégrations de _général.scss pour la mise en page du footer
+@import '_footer'; 
 /*fin : importation des fichiers scss*/

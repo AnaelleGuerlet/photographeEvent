@@ -1,15 +1,15 @@
 console.log('yo!');
 //début : popup de contact
-function monModale(e) 
+function modaleContact(e) 
 {
-    el = document.getElementById("monModale");
+    el = document.getElementById("modaleContact");
     el.style.visibility = "visible";
 }
 
-function monModaleClose(e) 
+function modaleContactClose(e) 
 {
     e = window.event || e;
-    el = document.getElementById("monModale");
+    el = document.getElementById("modaleContact");
     if (e.target == el)
         el.style.visibility = "hidden";
 }

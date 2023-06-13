@@ -47,7 +47,6 @@
             font-weight: 500;
             
         }
-       
         option:hover
         {
             background-color: $couleurTerciaireFormulaire;
@@ -61,12 +60,30 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 70px 20px;
+        justify-content: center;
         .miniature
         {
             width: 564px;
             height: 495px;
             margin: 0;
             object-fit: cover;
+            position:relative ;
+        }
+        #boutonChargerPlus
+        {
+            background-color: $couleurBouton;
+            font-size: 12px;
+            padding: 1% 8%;
+            &:hover
+            {
+                background-color: black;
+                color: white;
+            }
+            &:visited
+            {
+                visibility: hidden;
+            }
         }
     }
 }
+
