@@ -2,7 +2,7 @@
 /**
  * 	The Template name: Page pour une photo
  */
-
+include(ABSPATH.'wp-content/themes/photographeEvent/overlay.php');
 ?>
 <article class="article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="article__partie1">
@@ -20,9 +20,11 @@
 
 			<div class="article__partie1__descriptionPhoto__photo">
 				<?php 
-					echo '<div class="overlay">';	
-						twenty_twenty_one_post_thumbnail(); 
-						include('wp-content/themes/photographeEvent/overlay.php');
+					echo '<div class="overlay">';
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large');
+						echo '<img src="'.$image[0].'"/>';
+						//the_post_thumbnail(); 
+						overlay($image[0], get_the_terms( $post->ID, 'categorie')[0]->name, get_the_title());
 					echo '</div>';
 					?>
 			</div>
@@ -97,18 +99,18 @@
 
 					$reponse->the_post();
 					$article = get_post();
-
+					
 					if ($articleEnCours->ID != $article->ID)
 					{
 						echo '<div class="overlay">';
 						//j'affiche les liens des post
-						echo '<a href="'.esc_url( get_permalink() ) .'.svg">';
+						echo '<a href="'.esc_url( get_permalink() ) .'">';
 						//je récupère l'image a la une 
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large');
 						//j'affiche l'image a la une 
 						echo '<img class="article__partie2__photosSimilaires--miniatures" src="'.$image[0].'"/>';
 						echo '</a>';
-						include('wp-content/themes/photographeEvent/overlay.php');
+						overlay($image[0], $categorieArticle[0]->name, get_the_title());
 						echo '</div>';
 					}
 				endwhile; 

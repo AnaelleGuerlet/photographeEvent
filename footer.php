@@ -42,8 +42,11 @@
 			<!--short code du modaleContact-->
 			<?php echo do_shortcode('[hf_form slug="contact"]'); ?>
 
-		<?php endif;?>
-			
+		<?php endif;
+ 
+		
+		?>
+
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->

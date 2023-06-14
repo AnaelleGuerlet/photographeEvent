@@ -138,7 +138,7 @@ p {
   background-color: #FFD6D6;
 }
 .archive__body__photos {
-  margin-top: 4%; 
+  margin-top: 4%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -203,11 +203,6 @@ p {
   text-decoration: none;
 }
 .article__partie1__descriptionPhoto__photo figure {
-  margin: 0;
-}
-.article__partie1__descriptionPhoto__photo img {
-  height: auto;
-  width: 100%;
   margin: 0;
 }
 .article__partie1__interaction {
@@ -290,12 +285,12 @@ p {
 }
 .overlay__hover {
   position: absolute;
-  width: 564px;
-  height: 495px;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   top: 0;
   transition: 0.5s ease;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .overlay__hover--image {
   position: absolute;
@@ -308,11 +303,15 @@ p {
 .overlay__hover--image--pleinEcran {
   top: 2%;
   right: 4%;
+  width: 34px;
+  height: 34px;
   position: absolute;
 }
 .overlay__hover--image--oeil {
   top: 50%;
   left: 50%;
+  width: 46px;
+  height: 31px;
   position: absolute;
 }
 .overlay:hover .overlay__hover {
@@ -406,16 +405,16 @@ p {
   font-size: 12px;
   font-weight: 400;
   font-family: "Space Mono", sans-serif;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .lightbox__next {
-  background: url("../assets/arrowNext.svg") 80% center/25px 16px no-repeat;
+  background: url("../assets/arrowNext.svg") 80% center/25px 16px no-repeat transparent;
 }
 .lightbox__prev {
   right: auto;
   left: 0;
   image-orientation: from-image;
-  background: url(../assets/arrowPrev.svg) 20% center/25px 16px no-repeat;
+  background: url(../assets/arrowPrev.svg) 20% center/25px 16px no-repeat transparent;
 }
 .lightbox__close {
   border: none;
@@ -457,6 +456,14 @@ p {
 }
 .lightbox__fadeOut {
   opacity: 0;
+}
+.lightbox__categorie {
+  height: 50px;
+  color: #fff;
+}
+.lightbox__titre {
+  height: 50px;
+  color: #fff;
 }
 
 @keyframes lightboxIn {

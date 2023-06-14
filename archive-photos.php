@@ -4,7 +4,9 @@ Template Name: Photos
 */
 
 
-get_header(); ?>
+get_header(); 
+include(ABSPATH.'wp-content/themes/photographeEvent/overlay.php');
+?>
 <!--début : création du hero-->
 <header id="archive_header" class="archive__header">
 <img class="archive__header--hero" src="wp-content/themes/photographeEvent/assets/header_images/nathalie-<?php echo(rand(0,15));?>.jpeg"/>
@@ -72,7 +74,7 @@ get_header(); ?>
             echo '<a href="'.esc_url( get_permalink() ) .'">';
                 $image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'large'); 
                 echo '<img class="miniature overlay__image" src="'.$image[0].'"/>';
-            include 'overlay.php';
+            //include 'overlay.php';
             echo '</a>';
         echo '</div>';
         ?> 

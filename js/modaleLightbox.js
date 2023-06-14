@@ -10,24 +10,30 @@ window.onload = function() {
     {
         static init ()
         {
-            const links = Array.from(document.querySelectorAll('a[href$=".svg"]'))
+            const links = Array.from(document.querySelectorAll('.overlaySource'))
             const gallery = links.map(link=> link.getAttribute('href'))
             
             links.forEach(link => link.addEventListener('click', e => 
             {
                 e.preventDefault()
-                new Lightbox(e.currentTarget.getAttribute('href'), gallery)
+                new Lightbox(
+                    e.currentTarget.getAttribute('href'),
+                    e.currentTarget.querySelector('.overlayCategory').innerHTML,
+                    e.currentTarget.querySelector('.overlayTitre').innerHTML,
+                    gallery
+                )
             }))
         }
+
         
         /**
          * @param {string} url URL de l'image
          * @param {string[]} images chemins des images de la lightbox
          * (première chose a faire est de construire html de la lightbox voir plus bas)
          */
-        constructor (url, images)
+        constructor (url, category, titre, images)
         {
-            this.element = this.buildDOM(url)
+            this.element = this.buildDOM(url, category, titre)
             this.images = images
             this.loadImage(url)
             this.onKeyUp = this.onKeyUp.bind(this)
@@ -125,13 +131,18 @@ window.onload = function() {
          * (première chose : construire html de la lightbox)
          * @return {HTMLElement}
          */
-        buildDOM (url)
+        buildDOM (url, category, titre)
         {
             const dom = document.createElement('div')
             dom.classList.add ('lightbox')
-            dom.innerHTML = `<button class="lightbox__close"></button>
+            dom.innerHTML = `
+                    <p class="lightbox__categorie"></p>
+                    <p class="lightbox__categorie">`+category+`</p>
+                    <button class="lightbox__close"></button>
                 <button class="lightbox__next">suivant</button>
                 <button class="lightbox__prev">précédent</button>
+                <p class="lightbox__titre">`+titre+`</p>
+                
                 <div class="lightbox__container"></div>`
             dom.querySelector('.lightbox__close').addEventListener('click', this.close.bind(this))
             dom.querySelector('.lightbox__next').addEventListener('click', this.next.bind(this))
@@ -139,17 +150,6 @@ window.onload = function() {
             return dom
         }
     }
-/**
-    * début : lightbox
-        <div class="lightbox">
-            <button class="lightbox__close"></button>
-            <button class="lightbox__next">suivant</button>
-            <button class="lightbox__prev">précédent</button>
-            <div class="lightbox__container">
-                <img src="https://picsum.photos/900/1800" alt="image">
-            </div>
-        </div>
-    * fin: lightbox
-*/
+
     Lightbox.init()
 }

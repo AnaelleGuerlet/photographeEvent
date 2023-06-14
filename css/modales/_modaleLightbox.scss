@@ -40,18 +40,18 @@
         font-size: 12px;
         font-weight: 400;
         font-family: 'Space Mono', sans-serif;
-        background-color: transparent;
+        background-color: transparent !important;
     }
     &__next
     {
-        background: url("../assets/arrowNext.svg") 80% center / 25px 16px no-repeat;
+        background: url("../assets/arrowNext.svg") 80% center / 25px 16px no-repeat transparent;
     }
     &__prev
     {
         right: auto;
         left: 0;
         image-orientation: from-image;
-        background: url(../assets/arrowPrev.svg) 20% center / 25px 16px no-repeat;
+        background: url(../assets/arrowPrev.svg) 20% center / 25px 16px no-repeat transparent;
     }
     &__close
     {
@@ -100,6 +100,16 @@
     &__fadeOut
     {
         opacity: 0;
+    }
+    &__categorie
+    {
+        height: 50px;
+        color: #fff;
+    }
+    &__titre
+    {
+        height: 50px;
+        color: #fff;
     }
 }
 
